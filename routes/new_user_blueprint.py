@@ -15,7 +15,7 @@ def new_user():
             with sql.connect("users.db") as con:
                 cur = con.cursor()
                 cur.execute(
-                    "INSERT INTO students (name,email,city) VALUES (?,?,?)",
+                    "INSERT INTO users (name,email,city) VALUES (?,?,?)",
                     (name, email, city))
 
                 con.commit()

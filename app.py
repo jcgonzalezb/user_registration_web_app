@@ -12,7 +12,7 @@ db.create_all()
 
 app.register_blueprint(home_blueprint)
 
-@app.route('/enternew')
+@app.route('/enternew', methods = ['POST', 'GET'])
 def add_user():
    return render_template('new_user.html')
 
