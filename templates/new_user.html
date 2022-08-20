@@ -1,16 +1,26 @@
-<html>
-   <body>
-      <form action = "{{ url_for('add_user') }}" method = "POST">
-         <h3>Información del usuario</h3>
-         Nombre<br>
-         <input type = "text" name = "name" /></br>
-         
-         email<br>
-         <input type = "text" name = "email" /><br>
-         
-         Ciudad<br>
-         <input type = "text" name = "city" /><br>
-    	 <input type = "submit" value = "submit" /><br>
-      </form>
-   </body>
-</html>
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag() }}
+            <img class="mb-4" src="https://res.cloudinary.com/jimshapedcoding/image/upload/v1597332609/android-icon-192x192_ove2a7.png" alt="">
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please Create your Account
+            </h1>
+            <br>
+            {{ form.name.label() }}
+            {{ form.name(class="form-control", placeholder="Name") }}
+
+            {{ form.email.label() }}
+            {{ form.email(class="form-control", placeholder="Email") }}
+
+            {{ form.city.label() }}
+            {{ form.city(class="form-control", placeholder="City") }}
+            <br>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+    </div>
+</body>
+{% endblock %}
