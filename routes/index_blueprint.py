@@ -1,9 +1,8 @@
 # flask packages
-from flask import Blueprint, jsonify, render_template
+from flask import Blueprint, render_template
 
 # project resources
-from config import app, db
-from models.user import User
+from config import app
 
 index_blueprint = Blueprint('index_blueprint', __name__, url_prefix='/')
 
