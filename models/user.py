@@ -9,6 +9,6 @@ class User(db.Model):
     """
     __tablename__ = 'users'
 
-    name = db.Column(db.String(128), nullable=False)
+    name = db.Column(db.String(128), primary_key=True, unique=True, nullable=False)
     email = db.Column(db.String(128), unique=True, nullable=False)
     city = db.Column(db.String(128), nullable=False)
