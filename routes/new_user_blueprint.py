@@ -2,9 +2,6 @@
 from flask import Blueprint, render_template, request
 import sqlite3 as sql
 
-# project resources
-from config import app
-
 new_user_blueprint = Blueprint('new_user_blueprint', __name__, url_prefix='/new_user')
 
 @new_user_blueprint.route('/', methods=['POST', 'GET'], strict_slashes=False)
