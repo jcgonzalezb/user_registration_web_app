@@ -11,11 +11,6 @@ from flask import render_template
 db.create_all()
 
 app.register_blueprint(home_blueprint)
-
-@app.route('/enternew', methods = ['POST', 'GET'])
-def add_user():
-   return render_template('new_user.html')
-
 app.register_blueprint(new_user_blueprint)
 app.register_blueprint(user_list_blueprint)
 
