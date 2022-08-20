@@ -6,8 +6,7 @@ from config import app
 
 home_blueprint = Blueprint('home_blueprint', __name__, url_prefix='/')
 
-
-@app.route('/')
+@home_blueprint.route('/')
 def index():
     """
     Home page. No token needed

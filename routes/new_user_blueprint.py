@@ -5,8 +5,9 @@ import sqlite3 as sql
 # project resources
 from config import app
 
+new_user_blueprint = Blueprint('new_user_blueprint', __name__, url_prefix='/new_user')
 
-@app.route('/new_user', methods=['POST', 'GET'])
+@new_user_blueprint.route('/', methods=['POST', 'GET'], strict_slashes=False)
 def new_user():
     if request.method == 'POST':
         try:
@@ -22,10 +23,8 @@ def new_user():
 
                 con.commit()
                 msg = "Record successfully added"
+                con.close()
+                return render_template("result.html", msg=msg)
         except:
             con.rollback()
             msg = "error in insert operation"
-
-        finally:
-            return render_template("result.html", msg=msg)
-            con.close()
