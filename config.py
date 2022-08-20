@@ -6,8 +6,8 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 # Connection to the database
-uri = 'mysql+pymysql://root:@localhost:3306/stock_log_db'
-app.config['SQLALCHEMY_DATABASE_URI'] = uri
+db_file = 'users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + db_file
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Create a database object using the SQLAlchemy class,
