@@ -4,7 +4,7 @@ from flask import Blueprint, render_template
 # project resources
 from config import app
 
-index_blueprint = Blueprint('home_blueprint', __name__, url_prefix='/')
+home_blueprint = Blueprint('home_blueprint', __name__, url_prefix='/')
 
 
 @app.route('/')
