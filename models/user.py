@@ -9,6 +9,8 @@ class User(db.Model):
     """
     __tablename__ = 'users'
 
-    name = db.Column(db.String(128), primary_key=True, unique=True, nullable=False)
-    email = db.Column(db.String(128), unique=True, nullable=False)
-    city = db.Column(db.String(128), nullable=False)
+    id = db.Column(db.Integer(), primary_key=True,
+                   autoincrement=True, nullable=False)
+    name = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(80), unique=True, nullable=False)
+    city = db.Column(db.String(80), nullable=False)
