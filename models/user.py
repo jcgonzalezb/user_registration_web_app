@@ -7,7 +7,7 @@ class User(db.Model):
     User Flask-SQLAlchemy Model
     Represents objects contained in the users table
     """
-    __tablename__ = 'users'
+    __tablename__ = 'user'
 
     id = db.Column(db.Integer(), primary_key=True,
                    autoincrement=True, nullable=False)
