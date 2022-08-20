@@ -13,4 +13,4 @@ def index():
     Index page. No token needed
     :return: JSON object
     """
-    return render_template('welcome.html')
+    return render_template('home.html')
