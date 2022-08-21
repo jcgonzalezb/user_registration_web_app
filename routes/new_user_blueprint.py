@@ -2,7 +2,7 @@
 from flask import Blueprint, render_template, flash
 
 from models.user import User
-from forms import RegisterForm
+from forms.forms import RegisterForm
 from config import db
 
 new_user_blueprint = Blueprint('new_user_blueprint', __name__, url_prefix='/new_user')
