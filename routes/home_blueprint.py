@@ -9,7 +9,6 @@ home_blueprint = Blueprint('home_blueprint', __name__, url_prefix='/')
 @home_blueprint.route('/')
 def index():
     """
-    Home page. No token needed
-    :return: JSON object
+    Home page for this application.
     """
     return render_template('home.html')
