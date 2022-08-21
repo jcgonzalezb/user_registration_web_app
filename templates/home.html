@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            html {
+                height: 100%;
+                /*Image only BG fallback*/
+                display: flex;
+                justify-content: center;
+                /*background = gradient + image pattern combo*/
+                background:
+                    linear-gradient(rgba(255, 255, 255, 0.6), rgba(7, 236, 49, 0.6));
+            }
+            
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                font-size: 18px;
+                font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+                color: #484848;
+            }
+
+
+            header.masthead {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+                text-align: center;
+                color: rgb(0, 0, 0);
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-position: center center;
+                background-size: cover;
+            }
+            header.masthead .masthead-subheading {
+                font-size: 1.5rem;
+                font-style: italic;
+                line-height: 1.5rem;
+                margin-bottom: 25px;
+                font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            }
+            header.masthead .masthead-heading {
+                font-size: 3.25rem;
+                font-weight: 700;
+                line-height: 3.25rem;
+                margin-bottom: 2rem;
+                font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            }
+            
+            @media (min-width: 768px) {
+                header.masthead {
+                padding-top: 12rem;
+                padding-bottom: 12rem;
+            }
+            header.masthead .masthead-subheading {
+                font-size: 2.25rem;
+                font-style: italic;
+                line-height: 2.25rem;
+                margin-bottom: 2rem;
+            }
+            header.masthead .masthead-heading {
+                font-size: 4.5rem;
+                font-weight: 700;
+                line-height: 4.5rem;
+                margin-bottom: 4rem;
+            }
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Página principal</title>
+    </head>
+
+
+    <body class="text-center">
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Mucho gusto en conocerte</div>
+                <div class="masthead-heading text-uppercase">Bienvenido a Coink!</div>
+
+                <a class="btn btn-primary btn-xl text-uppercase" href="/new_user">Crear nuevo usuario</a>
+                <p></p>
+                <a class="btn btn-primary btn-xl text-uppercase" href="/user_list">Lista de usuarios creados</a>
+            </div>
+        </header>
+    </body>
+</html>

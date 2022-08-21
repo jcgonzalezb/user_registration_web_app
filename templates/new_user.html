@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            html {
+                height: 100%;
+                /*Image only BG fallback*/
+                display: flex;
+                justify-content: center;
+                /*background = gradient + image pattern combo*/
+                background:
+                    linear-gradient(rgba(255, 255, 255, 0.6), rgba(7, 236, 49, 0.6));
+            }
+            
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                font-size: 18px;
+                font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+                color: #484848;
+            }
+            
+            div.container {
+                max-width: 1000px;
+                margin-top: 10px;
+                margin-bottom: 30px;
+                margin-left: auto;
+                margin-right: auto;
+                align-items: center;
+            }
+
+            /*form styles*/
+            #msform {
+                width: 800px;
+                margin: 10px auto;
+                text-align: center;
+                position: relative;
+            }
+            #msform fieldset {
+                background: white;
+                border: 0 none;
+                border-radius: 3px;
+                box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+                padding: 20px 30px;
+                box-sizing: border-box;
+                width: 80%;
+                margin: 0 10%;
+                position: relative;
+            }
+
+            /*headings*/
+            .fs-title {
+                font-size: 30px;
+                text-transform: uppercase;
+                color: #2C3E50;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Nuevo Usuario</title>
+    </head>
+
+    {% block content %}
+    <body class="text-center">
+        <div class="container">
+            <div class="container">
+                <form style="color:black" id="msform">
+                    <fieldset>
+                    <p></p>
+    
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{ message }}
+                </div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+                    </fieldset>
+                </form>
+            </div>
+
+            <form method="POST" class="form-register" style="color:black" id="msform">
+                {{ form.csrf_token() }}
+                <fieldset>
+                <h1 class="fs-title">
+                    Ingresar nuevo usuario
+                </h1>
+                <p></p>
+                
+                {{ form.name.label() }}<br>
+                {{ form.name(class="form-control", placeholder="Nombre completo") }}</br>
+                <p></p>
+                {{ form.email.label() }}<br>
+                {{ form.email(class="form-control", placeholder="Email") }}</br>
+                <p></p>
+                {{ form.city.label() }}<br>
+                {{ form.city(class="form-control", placeholder="Ciudad") }}</br>
+                
+                <br>
+                {{ form.submit(class="btn btn-lg btn-block btn-primary") }}</br>
+
+                <p></p>
+                <br><a href = "/">Ir a la página principal</a></br>
+
+            </fieldset>
+            </form>
+        </div>
+    </body>
+    {% endblock %}
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            html {
+                height: 120%;
+                /*Image only BG fallback*/
+                display: flex;
+                justify-content: center;
+                /*background = gradient + image pattern combo*/
+                background: 
+                    linear-gradient(rgba(255, 255, 255, 0.6), rgba(7, 236, 49, 0.6));
+            }
+            
+            body {
+                margin: 0px;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                font-size: 25px;
+                font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+                color: #000000;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+            th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #DDD;
+            }
+            
+            tr:hover {background-color: #D6EEEE;}
+
+            div.container {
+                max-width: 2000px;
+                margin-top: 10px;
+                margin-bottom: 30px;
+                margin-left: auto;
+                margin-right: auto;
+                align-items: center;
+            }
+
+            /*form styles*/
+            #msform {
+                width: 1600px;
+                margin: 10px auto;
+                text-align: center;
+                position: relative;
+            }
+            #msform fieldset {
+                background: white;
+                border: 0 none;
+                border-radius: 3px;
+                box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+                padding: 20px 30px;
+                box-sizing: border-box;
+                width: 80%;
+                margin: 0 10%;
+                position: relative;
+            }
+
+            /*headings*/
+            .fs-title {
+                font-size: 30px;
+                text-transform: uppercase;
+                color: #2C3E50;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Lista de usuarios</title>
+    </head>
+
+    <body class="text-center">
+        <div class="container">
+            <form style="color:black" id="msform">
+                <fieldset>
+                <h1 class="fs-title">
+                    Lista de usuarios creados
+                </h1>
+                <p></p>
+
+            {% block content %}
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
+                        <!-- Your Columns HERE -->
+                        <th scope="col">Nombre completo</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Ciudad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Your rows inside the table HERE: -->
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.city }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endblock %}
+
+                <p></p>
+                <br><a href = "/">Ir a la página principal</a></br>
+
+                </fieldset>
+            </form>
+        <p></p>
+    </div>
+</body>
+</html>
