@@ -1,10 +1,14 @@
+"""
+Module created to hold the class User
+"""
 # project resource
 from config import db
+
 
 class User(db.Model):
     """
     User Flask-SQLAlchemy Model
-    Represents objects contained in the users table
+    Represents objects contained in the user table
     """
     __tablename__ = 'user'
 
