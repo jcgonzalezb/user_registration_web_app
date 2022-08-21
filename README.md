@@ -123,27 +123,28 @@ When you start the web application and copy the IP address from your console, th
 
 #### Example of use
 
-1. Go to http://127.0.0.1:5000/. There you will see a welcome message and to links to two different endpoints. The first endpoint is create a new user (Crear nuevo usuario). The second one is List of users created (Lista de usuarios creados). For this particular example, we are creating a new user and then we are going to check the list of users created.
+1. Go to http://127.0.0.1:5000/. There you will see a welcome message and to links to two different endpoints. The first endpoint is create a new user (Crear nuevo usuario). The second one is list of users created (Lista de usuarios creados). For this particular example, we are creating a new user and then we are going to check the list of users created.
 
 ![Home page](documentation/images/home.png)
 
-2. Make click on the create a new user (Crear nuevo usuario) link. A form will be shown and you can fill it with the name, email and city of the user. Once the form complete, make click on create user (Crear usario)buttom. If the information is correct, you will see a form confirming that the user was created successfully.
+2. Make click on the create a new user (Crear nuevo usuario) link. A form will be shown and you can fill it with the name, email and city of the user. Once the form complete, make click on create user (Crear usario)buttom. If the information is correct, you will see a form confirming that the user was created successfully. From there you have to continue to the home page.
 
 ![new user](documentation/images/new_user.png)
 ![new user_2](documentation/images/new_user2.png)
 ![new user_3](documentation/images/new_user3.png)
 
 
-If the form is not complete or the name or the email are already created, the web application will show you warnings and will let you know what should be done.
+If the form is not complete or the name or the email are already created, the web application will show you warnings and will let you know what should be done. You cannot proceed further until the form has been created correctly. If you do not want to continue, just click on the go to the home page (Ir a la pagina principal) link.
 
 ![error user](documentation/images/error_new_user.png)
 
 
-3. SET the HTTP method to PATCH and and make click on the send buttom. The app will show the following mssage: "The user has been updated!". The user name has been updated successfully. To confirm the update, go to http://127.0.0.1:5000/users/profile.
+3. The next step is checking the list of users, which in this case will be the user previously created. On the home page, make click on the list of users created (Lista de usuarios creados) link. The web application will show you the list of users created.
 
-![Postman Update](documentation/images/update_user_2.png)
+![list users](documentation/images/list_users.png)
 
-![Postman Profile](documentation/images/update_user_3.png)
+If you want to go back to the home page, just click on the go to the home page (Ir a la pagina principal) link.
+
 
 ## Construction of this project
 
