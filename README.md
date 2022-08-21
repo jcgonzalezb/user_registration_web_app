@@ -54,8 +54,6 @@ This project was developed on Ubuntu 20.04 LTS using python 3.8.10 with flask fr
 
 This is the list of available endpoints for this project.
 
-**Index**
-
 |Method          |Path                           |Description                  |
 |----------------|-------------------------------|-----------------------------|
 |GET             |```/```                        |Welcome message to the user.  |
@@ -66,13 +64,13 @@ This is the list of available endpoints for this project.
 
 1. Clone this repository
 ```
-$   git clone "https://github.com/jcgonzalezb/stock_trading_log.git"
+$   git clone "https://github.com/jcgonzalezb/user_registration_web_app.git"
 ```
 
-2. Access the 'stock_trading_log' directory:
+2. Access the 'user_registration_web_app' directory:
 
 ```
-$   cd stock_trading_log
+$   cd user_registration_web_app
 ```
 
 3. As a good practice, I suggest you create a virtual environment, e.g.
@@ -91,7 +89,6 @@ $   source myenv/bin/activate
 ```
 $   pip install -r requirements.txt
 ```
-
 
 
 6. Run the program
