@@ -3,7 +3,7 @@
     <head>
         <style>
             html {
-                height: 110%;
+                height: 100%;
                 /*Image only BG fallback*/
                 display: flex;
                 justify-content: center;
@@ -24,7 +24,7 @@
             
             div.container {
                 max-width: 1000px;
-                margin-top: 50px;
+                margin-top: 10px;
                 margin-bottom: 30px;
                 margin-left: auto;
                 margin-right: auto;
@@ -34,7 +34,7 @@
             /*form styles*/
             #msform {
                 width: 800px;
-                margin: 50px auto;
+                margin: 10px auto;
                 text-align: center;
                 position: relative;
             }
@@ -96,7 +96,7 @@
                 <p></p>
                 
                 {{ form.name.label() }}<br>
-                {{ form.name(class="form-control", placeholder="Nombre") }}</br>
+                {{ form.name(class="form-control", placeholder="Nombre completo") }}</br>
                 <p></p>
                 {{ form.email.label() }}<br>
                 {{ form.email(class="form-control", placeholder="Email") }}</br>
