@@ -37,32 +37,39 @@
 
             div.container {
                 max-width: 1000px;
-                margin-top: 10px;
-                margin-bottom: 40px;
+                margin-top: 50px;
+                margin-bottom: 30px;
                 margin-left: auto;
                 margin-right: auto;
                 align-items: center;
+            }
+
+            /*form styles*/
+            #msform {
+                width: 800px;
+                margin: 50px auto;
                 text-align: center;
+                position: relative;
             }
-            div.container .masthead-heading {
-                font-size: 3.25rem;
-                font-weight: 700;
-                line-height: 3.25rem;
-                margin-bottom: 2rem;
-                font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            #msform fieldset {
+                background: white;
+                border: 0 none;
+                border-radius: 3px;
+                box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+                padding: 20px 30px;
+                box-sizing: border-box;
+                width: 80%;
+                margin: 0 10%;
+                position: relative;
             }
-            
-            @media (min-height: 9000px ) {
-                div.container  {
-                padding-top: 12px;
-                padding-bottom: 70px;
-            }
-            div.container .masthead-heading {
-                font-size: 50px;
-                font-weight: 700;
-                line-height: 4.5rem;
-                margin-bottom: 4rem;
-            }
+
+            /*headings*/
+            .fs-title {
+                font-size: 30px;
+                text-transform: uppercase;
+                color: #2C3E50;
+                text-align: center;
+                margin-bottom: 30px;
             }
         </style>
         <meta charset="UTF-8">
@@ -71,7 +78,12 @@
 
     <body class="text-center">
         <div class="container">
-            <div class="masthead-heading text-uppercase">Lista de usuarios</div>
+            <form style="color:black" id="msform">
+                <fieldset>
+                <h1 class="fs-title">
+                    Lista de usuarios
+                </h1>
+                <p></p>
 
             {% block content %}
             <table class="table table-hover table-dark">
@@ -96,10 +108,11 @@
             </table>
         {% endblock %}
 
-        <p></p>
-        <div class="container">
-            <a class="btn btn-primary btn-xl text-uppercase" href="/">Ir a la página principal</a>
-        </div>
+                <p></p>
+                <br><a href = "/">Ir a la página principal</a></br>
+
+                </fieldset>
+            </form>
         <p></p>
     </div>
 </body>
