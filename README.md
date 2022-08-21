@@ -111,7 +111,7 @@ Now you are running the API and it is ready to create requests locally and test 
  * Debugger PIN: 262-635-844
 ```
 
-7. To test the API, copy the IP address from your console, e.g. http://127.0.0.1:5000 and go to Usage
+7. To test the API, copy the IP address from your console, e.g. http://127.0.0.1:5000 and go to the Usage in this README file.
 
 8. When you have done, terminate the app process with Ctrl+c and deactivate the venv.
 
