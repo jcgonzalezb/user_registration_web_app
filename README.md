@@ -96,7 +96,7 @@ $   pip install -r requirements.txt
 $   python3 app.py
 ```
 
-Now you are running the API and it is ready to create requests locally and test functionality, e.g.
+Now you are running the web application and it is ready to create requests locally and test functionality, e.g.
 
 ```
  * Serving Flask app 'config' (lazy loading)
@@ -110,7 +110,7 @@ Now you are running the API and it is ready to create requests locally and test 
  * Debugger PIN: 262-635-844
 ```
 
-7. To test the API, copy the IP address from your console, e.g. http://127.0.0.1:5000 and go to the Usage in this README file.
+7. To test the web application, copy the IP address from your console, e.g. http://127.0.0.1:5000 and go to the Usage in this README file.
 
 8. When you have done, terminate the app process with Ctrl+c and deactivate the venv.
 
@@ -119,14 +119,13 @@ $ deactivate
 ```
 ## Usage
 
-Load the postman collection in the [collections](documentation/collections) folder into your postman account to test each endpoint. 
+When you start the web application and copy the IP address from your console, the home page is shown. There you will see a welcome message and to links to two different endpoints.
 
 #### Example of use
 
-This example shows how to update the name of a user.
-1. Go to http://127.0.0.1:5000/login/, set in the authorization section the username (email) and password assigned to a user. Then, set the HTTP method to POST and make click on the send buttom. The server will return an access token you'll need to try the endpoints. At the end, make copy of the access token.
+1. Go to http://127.0.0.1:5000/. There you will see a welcome message and to links to two different endpoints. The first endpoint is create a new user (Crear nuevo usuario). The second one is List of users created (Lista de usuarios creados). For this particular example, we are creating a new user and then we are going to check the list of users created.
 
-![Postman Login](documentation/images/update_user_1.png)
+![Home page](documentation/images/home.png)
 
 2. Go to http://127.0.0.1:5000/users/update, set in the authorization section the username (email) and password assigned to the same user, click on Headers to insert the token previouesly created and click on Body to insert the JSON body with the new name of the user. The app would not be allowed to update more user information other than the name.
 
