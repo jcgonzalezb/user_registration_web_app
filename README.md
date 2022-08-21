@@ -44,9 +44,8 @@ This project was developed on Ubuntu 20.04 LTS using python 3.10.4 with flask fr
 - ```templates/``` contains html files used to show users and trades.
 - ```forms/``` contains forms used fot this project.
 - ```forms/form.py``` implements a form to create new users.
-- ```documentation/``` contains files used for document endpoints of the web application.
-- ```documentation/collections``` directory contains files used for use the web application.
-- ```documentation/images``` contains images used in the readme.md file.
+- ```documentation/``` contains files used for endpoints of the web application.
+- ```documentation/images``` contains images used in the readme.md file and the web application.
 
 
 ### Web Application Endpoints
