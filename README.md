@@ -23,7 +23,7 @@
 
 ##  Architecture
 ###  Technology Stack
-![Web infrastructure stack image](documentation/images/Technology%20stack.jpg)
+![Web infrastructure stack image](documentation/images/tech_project.png)
 
 ###  Database Diagram Model
 
@@ -136,6 +136,12 @@ This example shows how to update the name of a user.
 ![Postman Update](documentation/images/update_user_2.png)
 
 ![Postman Profile](documentation/images/update_user_3.png)
+
+## Construction of this project
+
+
+
+
 
 
 ## Bugs
