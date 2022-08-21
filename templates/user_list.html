@@ -13,15 +13,15 @@
             }
             
             body {
-                margin: 0;
+                margin: 100px;
                 padding: 0;
                 display: flex;
                 justify-content: center;
-                font-size: 18px;
+                font-size: 25px;
                 font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
                 color: #484848;
             }
-            
+
             div.container {
                 max-width: 1000px;
                 margin-top: 50px;
@@ -31,61 +31,81 @@
                 align-items: center;
             }
 
-            /*form styles*/
-            #msform {
-                width: 800px;
-                margin: 50px auto;
-                text-align: center;
-                position: relative;
+            table {
+                border-collapse: collapse;
+                width: 100%;
             }
-            #msform fieldset {
-                background: white;
-                border: 0 none;
-                border-radius: 3px;
-                box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-                padding: 20px 30px;
-                box-sizing: border-box;
-                width: 80%;
-                margin: 0 10%;
-                position: relative;
+            
+            th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #DDD;
             }
+            
+            tr:hover {background-color: #D6EEEE;}
 
-            /*headings*/
-            .fs-title {
-                font-size: 30px;
-                text-transform: uppercase;
-                color: #2C3E50;
-                text-align: center;
+            div.container {
+                max-width: 1000px;
+                margin-top: 50px;
                 margin-bottom: 30px;
+                margin-left: auto;
+                margin-right: auto;
+                align-items: center;
+            }
+            div.container .masthead-heading {
+                font-size: 3.25rem;
+                font-weight: 700;
+                line-height: 3.25rem;
+                margin-bottom: 2rem;
+                font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            }
+            
+            @media (min-width: 1000px) {
+                header.masthead {
+                padding-top: 12rem;
+                padding-bottom: 12rem;
+            }
+            header.masthead .masthead-heading {
+                font-size: 4.5rem;
+                font-weight: 700;
+                line-height: 4.5rem;
+                margin-bottom: 4rem;
+            }
             }
         </style>
         <meta charset="UTF-8">
         <title>Lista de usuarios</title>
     </head>
 
+    <body class="text-center">
+        <div class="container">
+            <div class="masthead-heading text-uppercase">Lista de usuarios</div>
 
-
-
-    {% block content %}
-        <table class="table table-hover table-dark">
-            <thead>
-                <tr>
-                    <!-- Your Columns HERE -->
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Ciudad</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Your rows inside the table HERE: -->
-                {% for user in users %}
+            {% block content %}
+            <table class="table table-hover table-dark">
+                <thead>
                     <tr>
-                        <td>{{ user.name }}</td>
-                        <td>{{ user.email }}</td>
-                        <td>{{ user.city }}</td>
+                        <!-- Your Columns HERE -->
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Ciudad</th>
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% endblock %}
+                </thead>
+                <tbody>
+                    <!-- Your rows inside the table HERE: -->
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.city }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endblock %}
+
+        <p></p>
+        <br><a href = "/">Ir a la página principal</a></br>
+    </div>
+</body>
 </html>
