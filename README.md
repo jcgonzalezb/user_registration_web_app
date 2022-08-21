@@ -130,7 +130,7 @@ When you start the web application and copy the IP address from your console, th
 2. Make click on the create a new user (Crear nuevo usuario) link. A form will be shown and you can fill it with the name, email and city of the user. Once the form complete, make click on create user (Crear usario)buttom. If the information is correct, you will see a form confirming that the user was created successfully.
 
 ![new user](documentation/images/new_user.png)
-![new user_2](documentation/images/new_user.png)
+![new user_2](documentation/images/new_user2.png)
 ![new user_3](documentation/images/new_user3.png)
 
 
