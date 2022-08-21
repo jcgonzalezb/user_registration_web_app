@@ -15,7 +15,7 @@ class RegisterForm(FlaskForm):
         if email is not None:
             raise ValidationError('El email ya existe! Por favor intentar un email diferente')
 
-    name = StringField(label='Nombre', validators=[Length(min=2, max=80), DataRequired()])
+    name = StringField(label='Nombre completo', validators=[Length(min=2, max=80), DataRequired()])
     email = StringField(label='Email', validators=[Length(max=80), Email(), DataRequired()])
     city = StringField(label='Ciudad', validators=[Length(min=2, max=80), DataRequired()])
     submit = SubmitField(label='Crear usuario')
