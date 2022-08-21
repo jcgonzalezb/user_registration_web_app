@@ -13,7 +13,7 @@
 	* [Database Diagram Model](#database-diagram-model)
 * [Environment](#environment)
 	* [File Descriptions](#file-descriptions)
-	* [Web Application Endpoints](#web-endpoints)
+	* [Web Application Endpoints](#web-application-endpoints)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Bugs](#bugs)
