@@ -17,7 +17,7 @@
 * [Installation](#installation)
 * [Usage](#usage)
 * [Bugs](#bugs)
-* [Authors](#authors)
+* [Author](#author)
 * [License](#license)
 
 ##  Architecture
