@@ -88,7 +88,7 @@
             </div>
 
             <form method="POST" class="form-register" style="color:black" id="msform">
-                {{ form.hidden_tag() }}
+                {{ form.csrf_token() }}
                 <fieldset>
                 <h1 class="fs-title">
                     Ingresar nuevo usuario
