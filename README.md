@@ -1,6 +1,5 @@
 # User registration web application
-> This project is an HTTP server REST API implementation
-
+> This project is a web application to create a user registration service and to show the users created.
 
 ## Objectives
 
@@ -30,23 +29,23 @@
 ![Log trading log ERR Diagram](documentation/images/DB_stock_log_V3.png)
 
 ##  Environment
-This project was developed on Ubuntu 20.04 LTS using python 3.8.10 with flask framework, connecting to a MySQL Database.
+This project was developed on Ubuntu 20.04 LTS using python 3.10.4 with flask framework, connecting to a SQLite Database.
 
 ### File Descriptions
 
-- ```app.py```  contains the entry point of the API.
-- ```config.py```  contains the configuration settings for the API.
+- ```app.py```  contains the entry point of the web application.
+- ```config.py```  contains the configuration settings for the web application.
 - ```users.db```  contains the database configured for this project (data not included).
 - ```models/``` contains classes used for this project.
-- ```routes/``` contains endpoints implemented for the API.
+- ```routes/``` contains endpoints implemented for the web application.
 - ```routes/home_blueprint.py``` show welcome message for the user and links to create users and to show a list of users.
 - ```routes/new_user_blueprint.py``` implemented routes to create users.
 - ```routes/user_list_blueprint.py``` implemented routes to check the list of users created.
 - ```templates/``` contains html files used to show users and trades.
 - ```forms/``` contains forms used fot this project.
 - ```forms/form.py``` implements a form to create new users.
-- ```documentation/``` contains files used for document endpoints of the API.
-- ```documentation/collections``` directory contains files used for use the API.
+- ```documentation/``` contains files used for document endpoints of the web application.
+- ```documentation/collections``` directory contains files used for use the web application.
 - ```documentation/images``` contains images used in the readme.md file.
 
 
