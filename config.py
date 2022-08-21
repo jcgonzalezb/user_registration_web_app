@@ -1,3 +1,6 @@
+"""
+Module created to configure the web application
+"""
 # flask packages
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
