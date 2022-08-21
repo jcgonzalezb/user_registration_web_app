@@ -1,7 +1,6 @@
 # project resource
 from config import db
 
-
 class User(db.Model):
     """
     User Flask-SQLAlchemy Model
