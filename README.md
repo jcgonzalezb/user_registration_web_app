@@ -39,9 +39,9 @@ This project was developed on Ubuntu 20.04 LTS using python 3.8.10 with flask fr
 - ```users.db```  contains the database configured for this project (data not included).
 - ```models/``` contains classes used for this project.
 - ```routes/``` contains endpoints implemented for the API.
-- ```routes/home_blueprint.py``` implemented routes to create users and login.
+- ```routes/home_blueprint.py``` show welcome message for the user and links to create users and to show a list of users.
 - ```routes/new_user_blueprint.py``` implemented routes to create users.
-- ```routes/user_list_blueprint.py``` implemented routes to check the list of user created.
+- ```routes/user_list_blueprint.py``` implemented routes to check the list of users created.
 - ```templates/``` contains html files used to show users and trades.
 - ```forms/``` contains forms used fot this project.
 - ```forms/form.py``` implements a form to create new users.
@@ -60,7 +60,7 @@ This is the list of available endpoints for this project.
 |----------------|-------------------------------|-----------------------------|
 |GET             |```/```                        |Welcome message to the user.  |
 |POST            |```/new_user```                |Create a new user. Redirects to a confirmation page. |
-|GET             |```/user_list```             	 |Show a list of all users created by this user. | 
+|GET             |```/user_list```             	 |Show a list of all users created. | 
 
 ## Installation
 
