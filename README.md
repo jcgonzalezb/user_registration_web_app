@@ -26,7 +26,7 @@
 
 ###  Database Diagram Model
 
-![Log trading log ERR Diagram](documentation/images/DB_stock_log_V3.png)
+![Log trading log ERR Diagram](documentation/images/db.png)
 
 ##  Environment
 This project was developed on Ubuntu 20.04 LTS using python 3.10.4 with flask framework, connecting to a SQLite Database.
