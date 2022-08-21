@@ -13,7 +13,7 @@
 	* [Database Diagram Model](#database-diagram-model)
 * [Environment](#environment)
 	* [File Descriptions](#file-descriptions)
-	* [API Endpoints](#api-endpoints)
+	* [Web Application Endpoints](#web-endpoints)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Bugs](#bugs)
@@ -49,7 +49,7 @@ This project was developed on Ubuntu 20.04 LTS using python 3.10.4 with flask fr
 - ```documentation/images``` contains images used in the readme.md file.
 
 
-### API Endpoints
+### Web Application Endpoints
 
 This is the list of available endpoints for this project.
 
