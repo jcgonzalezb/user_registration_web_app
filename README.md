@@ -127,7 +127,17 @@ When you start the web application and copy the IP address from your console, th
 
 ![Home page](documentation/images/home.png)
 
-2. Go to http://127.0.0.1:5000/users/update, set in the authorization section the username (email) and password assigned to the same user, click on Headers to insert the token previouesly created and click on Body to insert the JSON body with the new name of the user. The app would not be allowed to update more user information other than the name.
+2. Make click on the create a new user (Crear nuevo usuario) link. A form will be shown and you can fill it with the name, email and city of the user. Once the form complete, make click on create user (Crear usario)buttom. If the information is correct, you will see a form confirming that the user was created successfully.
+
+![new user](documentation/images/new_user.png)
+![new user_2](documentation/images/new_user.png)
+![new user_3](documentation/images/new_user3.png)
+
+
+If the form is not complete or the name or the email are already created, the web application will show you warnings and will let you know what should be done.
+
+![error user](documentation/images/error_new_user.png)
+
 
 3. SET the HTTP method to PATCH and and make click on the send buttom. The app will show the following mssage: "The user has been updated!". The user name has been updated successfully. To confirm the update, go to http://127.0.0.1:5000/users/profile.
 
