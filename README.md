@@ -1,5 +1,5 @@
 # User registration web application
-> This project is a web application to create a user registration service and to show the users created.
+> This project is a web application which creates a user registration service and displays a list of the users created.
 
 ## Objectives
 
