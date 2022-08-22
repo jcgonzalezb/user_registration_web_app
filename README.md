@@ -155,7 +155,7 @@ If you want to go back to the home page, just click on the go to the home page (
 $   python3 -m unittest discover tests 2>&1
 ```
 
-In this project, the terminal should show you the following:
+The terminal should show you the following:
 
 ```
 .
