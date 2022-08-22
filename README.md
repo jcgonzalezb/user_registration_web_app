@@ -149,7 +149,7 @@ If you want to go back to the home page, just click on the go to the home page (
 
 ## Testing
 
-1. In this section we are going to test the user model of this project. To run the unit tests, we run the following command in the root folder of the application.
+1. In this section we are going to test the user model of this project. To run the unit tests, we run the following command in the root folder of this repository.
 
 ```
 $   python3 -m unittest discover tests 2>&1
@@ -180,10 +180,20 @@ This mean that the test was successful.
 
 5. To handle the home page endpoint, we create a function which handles the home endpoint and return a html template, which contains a welcome mesage for the user and two links to access information.
 
-6. To handle the new user endpoint, before we need to create a form supported by Flask to enter the user information. First, we create a folder called forms in the root of the application. Inside this folder, we create a file called forms.py. Inside this file 
+6. To handle the new user endpoint, before we need to create a form supported by Flask to enter the user information. First, we create a folder called forms in the root of this repository. Inside this folder, we create a file called forms.py. Inside this file we create a class called RegisterForm which create the create the spaces inside the form to be filled by the user. It is important to mention that some validators are created to make sure that the form is filled properly. For example, if the email information filled in the form is not an actual email, the web application will make a notification to the user to fix the problem.
 
+7. After the forms.py is complete, we create the new_user_blueprint.py file inside the routes directory. Inside the new_user_blueprint.py we create a function called new_user to get the information from the form and save it into the database. If the form is not completed properly, it will show some errors and guide the user until the form is completed properly. To show that the user was successfully created, we redirect the user one page to show confirmation.
 
+8. The last endpoint correspond to user_list_blueprint.py file which is the one in charge of handling the list of users endpoint. In this file we create a function called list, in which we make a query of the User class to get all the information from all the users and show it in a table inside a template.
 
+9. As mentioned above, to show the information in the endpoints, we need to create several templates. For this purpose, we create a directory called template in the root of the repository. 
+inside this directory, we create the following templates: home.html, new_user.html, added_user.html and user_list.html.
+
+10. Inside the home.html, we create a welcome message to the user and two links. One link is to redirect to the new_user.html and the other is for the user_list.html.
+
+11. Inside the new_user.html, we used Jinja2 to create a link between the form previously created and the information filled by the user. When the user make click on the create user buttom, the information will be saved in the database and the user will be redirected to the added_user.html in which the user will be notified that the user was created successfully. There, he will have the option to return to the home page.
+
+12. Inside the user_list.html, we used Jinja2 to create a connection between the database and the table inside the template and display a list with all the information from the users previously created. At the buttom of the template, there is the option to return to the home page.
 
 ## Bugs
 
