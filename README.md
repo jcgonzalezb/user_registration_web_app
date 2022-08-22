@@ -16,6 +16,8 @@
 	* [Web Application Endpoints](#web-application-endpoints)
 * [Installation](#installation)
 * [Usage](#usage)
+* [Testing](#testing)
+* [Construction of this project](#construction-of-this-project)
 * [Bugs](#bugs)
 * [Author](#author)
 * [License](#license)
@@ -42,11 +44,12 @@ This project was developed on Ubuntu 20.04 LTS using python 3.10.4 with flask fr
 - ```routes/new_user_blueprint.py``` implemented routes to create users.
 - ```routes/user_list_blueprint.py``` implemented routes to check the list of users created.
 - ```templates/``` contains html files used to show users and trades.
-- ```forms/``` contains forms used fot this project.
+- ```forms/``` contains forms used for this project.
 - ```forms/form.py``` implements a form to create new users.
 - ```documentation/``` contains files used for endpoints of the web application.
 - ```documentation/images``` contains images used in the readme.md file and the web application.
-
+- ```tests/``` contains test files for this project.
+- ```tests/test_user.py``` contains tests for the User model of this project.
 
 ### Web Application Endpoints
 
@@ -143,6 +146,26 @@ If the form is not complete or the name or the email are already created, the we
 ![list users](documentation/images/list_users.png)
 
 If you want to go back to the home page, just click on the go to the home page (Ir a la pagina principal) link.
+
+## Testing
+
+1. In this section we are going to test the user model of this project. To run the unit tests, we run the following command in the root folder of the application.
+
+```
+$   python3 -m unittest discover tests 2>&1
+```
+
+In this project, the terminal should show you the following:
+
+```
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.023s
+
+OK
+```
+
+This mean that the test was successful.
 
 
 ## Construction of this project
