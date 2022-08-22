@@ -170,7 +170,17 @@ This mean that the test was successful.
 
 ## Construction of this project
 
+1. After creating the repository, to construct this project, the first thing to do is create the config.py file. In this file we create the app, setup the configuration for the SQLite database and use SQLALchemy to create the database using the app as parameter.
 
+2. Next, we create the app.py file, which is the one that will run to create the web application. Inside this file we import the variables app and db from the configuration file. Also, we insert the command "db.create_all()" to create the database when the application is started. This is case the file will be users.db.
+
+3. The next step is the creation of the models. Because at this point we are going to create users, we only need to create one model. We are going to call it User. For this purpose, we create a folder called models and inside of it, we create a file called user.py. In this file we create a class called User, which is the representation of a table called user if we were working with SQLite. Inside this class, we create the attributes name, email and city, which correspond to the columns of the users database (users.db).
+
+4. Because this is a web application, we need to handle three endpoints. One for the home page, another for the create user functionality and a final one to show the list of users created. To handle the endpoints, we create a new folder called routes in which we will create three files, one for each endpoint. The names are home_blueprint.py, new_user_blueprint.py and user_list_blueprint.py. To create a better control of the endpoints and more modular web application, we will use a tool from Flask called Blueprint.
+
+5. To handle the home page endpoint, we create a function which handles the home endpoint and return a html template, which contains a welcome mesage for the user and two links to access information.
+
+6. To handle the new user endpoint, before we need to create a form supported by Flask to enter the user information. First, we create a folder called forms in the root of the application. Inside this folder, we create a file called forms.py. Inside this file 
 
 
 
